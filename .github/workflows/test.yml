@@ -25,8 +25,8 @@ jobs:
     
     - name: Print environment
       run: |
-        echo "Swift: $(swift --version | head -n1)"
-        echo "macOS: $(sw_vers -productVersion)"
+        printf "Swift: %s\n" "$(swift --version | head -n1)"
+        printf "macOS: %s\n" "$(sw_vers -productVersion)"
         
     - name: Build
       run: swift build -c release
