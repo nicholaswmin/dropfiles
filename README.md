@@ -4,9 +4,9 @@
 
 # dropfiles
 
-WIP - native macOS app for syncing `.dotfiles` to iCloud ☁️
+macOS app that autosyncs `.dotfiles` in iCloud ☁️.   
+**WIP**.
 
-- [Install](#install)
 - [UI Usage](#ui-usage)
 - [CLI Usage](#cli-usage)
 - [Development](#development)
@@ -16,9 +16,8 @@ WIP - native macOS app for syncing `.dotfiles` to iCloud ☁️
   - [Test](#test)
 - [License](#license)
 
-## Install
-
-Download the [latest release][latest]
+> [!WARNING]  
+> **WIP**: See [TODO.md][todo]
 
 ## UI Usage
 
@@ -113,3 +112,4 @@ swift test
 [adtools]: https://developer.apple.com/xcode/resources/
 [author]: https://github.com/nicholaswmin
 [license]: https://choosealicense.com/licenses/mit/
+[todo]: TODO.md
