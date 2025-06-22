@@ -2,11 +2,11 @@
 
 ## Critical
 
-- [ ] Remove `.plan.md` from root directory (gitignored but exists)
-- [ ] Add MIT `LICENSE` file to match README claims
+- [ ] Build in XCode and actually test
+- [ ] Add MIT `LICENSE` file 
 - [ ] Fix CONTRIBUTING.md URL: `.dropfiles/dropfiles` → `nicholaswmin/dropfiles`
-- [ ] Remove non-existent brew install instructions from README
-- [ ] Remove CLI Usage section (shortcuts don't exist yet)
+- [ ] Implement brew install
+- [ ] Implement CLI shortcuts
 
 ## Code Quality
 
