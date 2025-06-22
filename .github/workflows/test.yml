@@ -18,28 +18,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Setup Xcode
-      uses: maxim-lobanov/setup-xcode@v1
+    - name: Setup Swift
+      uses: swift-actions/setup-swift@v2
       with:
-        xcode-version: latest-stable
+        swift-version: "6"
     
-    - name: Verify environment
+    - name: Print environment
       run: |
-        # Swift version
-        SWIFT_ACTUAL=$(swift --version | head -n1 | grep -o '[0-9]\+\.[0-9]\+' | head -n1)
-        SWIFT_MAJOR="${SWIFT_ACTUAL%%.*}"
-        
-        # macOS version  
-        MACOS_ACTUAL=$(sw_vers -productVersion)
-        MACOS_MAJOR="${MACOS_ACTUAL%%.*}"
-        
-        # Version checks
-        echo "Swift: $SWIFT_ACTUAL (requires ${{ env.SWIFT_VERSION }}.x)"
-        echo "macOS: $MACOS_ACTUAL (requires ${{ env.MACOS_VERSION }}.0+)"
-        
-        # Validate
-        [[ "$SWIFT_MAJOR" == "${{ env.SWIFT_VERSION }}" ]] || echo "::warning::Swift ${{ env.SWIFT_VERSION }}.x required"
-        [[ "$MACOS_MAJOR" -ge "${{ env.MACOS_VERSION }}" ]] || echo "::warning::macOS ${{ env.MACOS_VERSION }}.0+ required"
+        echo "Swift: $(swift --version | head -n1)"
+        echo "macOS: $(sw_vers -productVersion)"
         
     - name: Build
       run: swift build -c release
