@@ -1,8 +1,6 @@
-# TODO: Dropfiles Cleanup
+# TODO
 
-**Status**: 🚧 Work in Progress
-
-## 🔥 Critical (Fix First)
+## Critical
 
 - [ ] Remove `.plan.md` from root directory (gitignored but exists)
 - [ ] Add MIT `LICENSE` file to match README claims
@@ -10,7 +8,7 @@
 - [ ] Remove non-existent brew install instructions from README
 - [ ] Remove CLI Usage section (shortcuts don't exist yet)
 
-## 🔧 Code Quality
+## Code Quality
 
 - [ ] Standardize import order across all Swift files
 - [ ] Extract UserDefaults keys to Constants enum:
@@ -23,24 +21,21 @@
 - [ ] Make `SyncError.errorDescription` return `String` (not optional)
 - [ ] Replace force unwraps with safe alternatives where possible
 
-## 🏗️ Configuration
+## Configuration
 
 - [ ] Fix Package.swift naming: product `dropfiles` vs target `Dropfiles`
 - [ ] Add Swift package caching to GitHub Actions CI
 
-## 🎨 Polish (Low Priority)
+## Polish
 
 - [ ] Add accessibility labels to UI elements  
 - [ ] Standardize logging categories and levels
 - [ ] Consistent line length (<80 chars where possible)
 
-## 📋 Documentation
+## Documentation
 
 - [ ] Clarify app launch instructions in README
 - [ ] Add note about macOS permissions needed (iCloud, file access)
 - [ ] Update contribution guide with actual repo structure
 
----
-
-**Target**: <600 LOC, zero dependencies, production-ready
-**Next**: Address Critical items, then Code Quality
+Target: <600 LOC, zero dependencies, production-ready

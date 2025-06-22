@@ -9,6 +9,7 @@ WIP - native macOS app for syncing `.dotfiles` to iCloud ☁️
 - [Install](#install)
 - [UI Usage](#ui-usage)
 - [CLI Usage](#cli-usage)
+- [Development](#development)
 - [Contributions](#contributions)
   - [Setup](#setup)
   - [Run](#run)
@@ -43,6 +44,10 @@ shortcuts run "Sync dropfiles"
 shortcuts run "Toggle Auto Sync"
 shortcuts run "Get Sync Status"
 ```
+
+## Development
+
+See [TODO.md](TODO.md) for cleanup tasks and development roadmap.
 
 ## Contributions
 
