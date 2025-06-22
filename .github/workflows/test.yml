@@ -1,0 +1,46 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  SWIFT_VERSION: "6"
+  MACOS_VERSION: "15"
+
+jobs:
+  test:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Xcode
+      run: sudo xcode-select -s /Applications/Xcode.app
+    
+    - name: Verify environment
+      run: |
+        # Swift version
+        SWIFT_ACTUAL=$(swift --version | head -n1 | grep -o '[0-9]\+\.[0-9]\+' | head -n1)
+        SWIFT_MAJOR="${SWIFT_ACTUAL%%.*}"
+        
+        # macOS version  
+        MACOS_ACTUAL=$(sw_vers -productVersion)
+        MACOS_MAJOR="${MACOS_ACTUAL%%.*}"
+        
+        # Version checks
+        echo "Swift: $SWIFT_ACTUAL (requires ${{ env.SWIFT_VERSION }}.x)"
+        echo "macOS: $MACOS_ACTUAL (requires ${{ env.MACOS_VERSION }}.0+)"
+        
+        # Validate
+        [[ "$SWIFT_MAJOR" == "${{ env.SWIFT_VERSION }}" ]] || echo "::warning::Swift ${{ env.SWIFT_VERSION }}.x required"
+        [[ "$MACOS_MAJOR" -ge "${{ env.MACOS_VERSION }}" ]] || echo "::warning::macOS ${{ env.MACOS_VERSION }}.0+ required"
+        
+    - name: Build
+      run: swift build -c release
+      
+    - name: Test
+      run: swift test
