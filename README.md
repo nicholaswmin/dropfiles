@@ -4,7 +4,7 @@
 
 # dropfiles
 
-native macOS app for syncing `.dotfiles` to iCloud ☁️
+WIP - native macOS app for syncing `.dotfiles` to iCloud ☁️
 
 - [Install](#install)
 - [UI Usage](#ui-usage)
@@ -17,11 +17,7 @@ native macOS app for syncing `.dotfiles` to iCloud ☁️
 
 ## Install
 
-```sh
-brew install --cask dropfiles
-```
-
-or download the [latest release][latest]
+Download the [latest release][latest]
 
 ## UI Usage
 
