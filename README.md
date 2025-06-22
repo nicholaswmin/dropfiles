@@ -81,7 +81,7 @@ swift test
 
 ## License
 
-> (c) 2025, [nicholaswmin][author] | [MIT License][license]  
+> © 2025, [nicholaswmin][author] | [MIT License][license]    
 >
 > Permission is hereby granted, free of charge, to any person obtaining    
 > a copy of this software and associated documentation files   
