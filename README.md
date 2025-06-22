@@ -52,7 +52,7 @@ See [TODO.md](TODO.md) for cleanup tasks and development roadmap.
 
 Read the [Contribution Guide][contrib]
 
-### Setup 
+### Build from source 
 
 Install [Apple Developer Tools][adtools]
 
@@ -60,19 +60,16 @@ Install [Apple Developer Tools][adtools]
 xcode-select --install
 ```
 
-then clone & run:
+then:
 
 ```sh
-git clone https://github.com/nicholaswmin/dropfiles.git
-cd dropfiles
-swift build -c release
-open .build/release/dropfiles
-```
+# clone
+git clone https://github.com/nicholaswmin/dropfiles.git && cd dropfiles
 
-### Run
-
-```sh
+# build
 swift build -c release
+
+# run
 open .build/release/dropfiles
 ```
 
@@ -84,9 +81,7 @@ swift test
 
 ## License
 
-> (c) 2025, [nicholaswmin][author]
->
-> The [MIT License][license]
+> (c) 2025, [nicholaswmin][author] | [MIT License][license]  
 >
 > Permission is hereby granted, free of charge, to any person obtaining  
 > a copy of this software and associated documentation files (the  
