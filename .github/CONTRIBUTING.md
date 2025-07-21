@@ -1,7 +1,10 @@
 # Contribution Guide
 
-Follows a minimalist philosophy: no external dependencies,  
-native macOS frameworks only, feature-poor and focused.
+- follow a minimalist philosophy; no external dependencies. 
+- use latest native macOS frameworks.
+- stay feature-poor and focused.
+
+toc:
 
 - [Setup](#setup)
 - [Process](#process)
@@ -174,7 +177,6 @@ xcrun altool --upload-app --type osx --file DropFiles.pkg \
 
 [nicholaswmin][author]
 
-⬅️ [Back to README](../README.md)
 
 [author]: https://github.com/nicholaswmin
 [apl-devtools]: https://developer.apple.com/xcode/resources/
@@ -182,11 +184,7 @@ xcrun altool --upload-app --type osx --file DropFiles.pkg \
 [swift-api]: https://www.swift.org/documentation/api-design-guidelines/
 [new-issue]: https://github.com/.dropfiles/dropfiles/issues/new
 [gh-flow]: https://docs.github.com/en/get-started/using-github/  
-           github-flow
-[tests]: Tests/
-[codesign]: https://developer.apple.com/documentation/security/  
-            code_signing_services
-[notarize]: https://developer.apple.com/documentation/security/  
-            notarizing_macos_software_before_distribution
+[codesign]: https://developer.apple.com/documentation/security/code_signing_services
+[notarize]: https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution
 [appstore]: https://appstoreconnect.apple.com
 [transporter]: https://apps.apple.com/app/transporter/id1450874784
